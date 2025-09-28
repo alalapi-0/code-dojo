@@ -1,0 +1,11 @@
+{
+  "id": "java_intro_hello",
+  "title": "打印问候（Java）",
+  "language": "java",
+  "description": "编写一个方法 `hello(String name)` 返回字符串 `Hello, <name>!`。",
+  "starterCode": "public class Solution {\n    public static String hello(String name) {\n        // TODO: 返回 \"Hello, <name>!\"\n        return \"\";\n    }\n}",
+  "tests": [
+    { "input": "Alice", "expected": "Hello, Alice!" },
+    { "input": "Bob",   "expected": "Hello, Bob!" }
+  ]
+}

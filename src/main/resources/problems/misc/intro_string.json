@@ -1,0 +1,10 @@
+{
+  "id": "misc_intro_string",
+  "title": "字符串拼接（其他）",
+  "language": "misc",
+  "description": "占位题：不同语言下都需要实现字符串拼接；此处仅演示。",
+  "starterCode": "// 这里可以放伪代码或目标语言模板",
+  "tests": [
+    { "input": "Alice", "expected": "Hello, Alice!" }
+  ]
+}

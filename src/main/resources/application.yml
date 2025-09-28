@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
+# TODO: 判题服务配置占位
+judge0:
+  enabled: false
+  endpoint: https://example.com/judge0
+  token: ${JUDGE0_TOKEN:}
