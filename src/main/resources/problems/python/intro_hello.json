@@ -1,0 +1,11 @@
+{
+  "id": "py_intro_hello",
+  "title": "打印问候（Python）",
+  "language": "python",
+  "description": "实现函数 hello(name): 返回字符串 'Hello, <name>!'。",
+  "starterCode": "def hello(name):\n    # TODO: 返回 \"Hello, <name>!\"\n    return \"\"",
+  "tests": [
+    { "input": "Alice", "expected": "Hello, Alice!" },
+    { "input": "Bob",   "expected": "Hello, Bob!" }
+  ]
+}

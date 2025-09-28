@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8"/>
+  <title>练习 - Code Dojo</title>
+  <link rel="stylesheet" href="/css/app.css"/>
+  <!-- Monaco Editor (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.51.0/min/vs/loader.js"></script>
+</head>
+<body>
+<header>
+  <h1>练习</h1>
+  <a href="/">返回首页</a>
+</header>
+
+<main>
+  <section>
+    <label>语言：
+      <select id="lang">
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="misc">Other</option>
+      </select>
+    </label>
+    <button id="loadProblems">加载题目</button>
+  </section>
+
+  <section>
+    <h2 id="problemTitle">选择语言后加载题目</h2>
+    <pre id="problemDesc"></pre>
+  </section>
+
+  <div id="editor" style="height: 360px; border:1px solid #ddd;"></div>
+  <button id="submitBtn">提交（占位）</button>
+  <pre id="resultBox"></pre>
+</main>
+
+<script src="/js/app.js"></script>
+<script>
+  // Monaco bootstrap
+  require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.51.0/min/vs' }});
+  window.MonacoEnvironment = { getWorkerUrl: function () {
+      return `data:text/javascript;charset=utf-8,${encodeURIComponent(`
+        self.MonacoEnvironment = { baseUrl: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.51.0/min/' };
+        importScripts('https://cdn.jsdelivr.net/npm/monaco-editor@0.51.0/min/vs/base/worker/workerMain.js');
+      `)}`;
+    } };
+  require(["vs/editor/editor.main"], function () {
+    window.editor = monaco.editor.create(document.getElementById('editor'), {
+      value: "// 请选择语言并加载题目…",
+      language: "java",
+      automaticLayout: true
+    });
+  });
+</script>
+</body>
+</html>
